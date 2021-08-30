@@ -1,0 +1,27 @@
+﻿@using EntityLayer.Concrete @*Bu sefer veritabanı tanımlarımız concrete içerisinde olduğu için onu tanımladık.*@
+@model List<Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+    </tr>
+
+    @foreach(var i in Model)
+    {
+        <tr>
+            <td>@i.CategoryId</td>
+            <td>@i.CategoryName</td>
+            <td>@i.CategoryDetail</td>
+            <td>@i.CategoryStatus</td>
+        </tr>
+    }
+
+</table>
