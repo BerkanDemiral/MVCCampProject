@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete.Repositories;
+﻿using BuisnessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,27 +10,25 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Concrete
 {
-    public class CategoryManager
+    public class CategoryManager : ICategoryService // burada kullanılan her metodu önce interface içerisinde tanımla.
     {
-        // 2 katmanı da kullandık**** UNUTMA DAL'daki concrete içerisindeki sınıfa bağlı olarak oluşturduk Interface'e değil.
-        GenericRepository<Category> repo = new GenericRepository<Category>();
+        ICategoryDal _categoryDal;
 
-        // tüm değerleri getir -- normal List
-        public List<Category> GetAll()
+        public CategoryManager(ICategoryDal categoryDal)
         {
-            return repo.List();
+            _categoryDal = categoryDal;
         }
 
-        public void CategoryAddBL(Category p)
+
+        public List<Category> GetList()
         {
-            if(p.CategoryName == "" || p.CategoryName.Length<=3 || p.CategoryDetail == "")
-            {
-                // hata mesajı
-            }
-            else
-            {
-                repo.Insert(p);
-            }
+            return _categoryDal.List();
+        }
+
+
+        public void CategoryAddBL(Category category)
+        {
+            _categoryDal.Insert(category); // fluentValidation kontrollerini controller tarafında gerekleştiririz.
         }
     }
 }
