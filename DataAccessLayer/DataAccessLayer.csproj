@@ -74,6 +74,14 @@
     <Compile Include="Migrations\202108290941512_mig2.designer.cs">
       <DependentUpon>202108290941512_mig2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109111149338_addAboutWriter.cs" />
+    <Compile Include="Migrations\202109111149338_addAboutWriter.designer.cs">
+      <DependentUpon>202109111149338_addAboutWriter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109111558449_mig_addedWriterTittle.cs" />
+    <Compile Include="Migrations\202109111558449_mig_addedWriterTittle.designer.cs">
+      <DependentUpon>202109111558449_mig_addedWriterTittle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -96,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108290941512_mig2.resx">
       <DependentUpon>202108290941512_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109111149338_addAboutWriter.resx">
+      <DependentUpon>202109111149338_addAboutWriter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109111558449_mig_addedWriterTittle.resx">
+      <DependentUpon>202109111558449_mig_addedWriterTittle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

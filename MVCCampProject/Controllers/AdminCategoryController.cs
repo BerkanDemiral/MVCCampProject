@@ -44,7 +44,6 @@ namespace MVCCampProject.Controllers
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
-
             return View();
         }
 
@@ -65,8 +64,23 @@ namespace MVCCampProject.Controllers
         [HttpPost]
         public ActionResult UpdateCategory(Category category)
         {
-            categoryManager.CategoryUodate(category);
-            return RedirectToAction("Index");
+
+            CategoryValidator categoryValidator = new CategoryValidator();
+            ValidationResult results = categoryValidator.Validate(category); // parametrenin validasyonunu yap --> fluentvalidation.results
+
+            if (results.IsValid)
+            {
+                categoryManager.CategoryUodate(category);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors) // validasyon sonucu oluşan result değerinde hatalrın tutulduğu diziye bakıyoruz
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }

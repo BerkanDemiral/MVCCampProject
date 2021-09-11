@@ -52,3 +52,5 @@ C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAcc
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addAboutWriter.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addedWriterTittle.resources
