@@ -1,0 +1,63 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<h3 style="font-weight:bolder; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Kategoriler</h3>
+<br />
+
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Kategori Adı</th>
+            <th>Düzenle</th>
+            <th>Sil</th>
+            <th>Başlıklar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <th>@i.CategoryId</th>
+                <td>@i.CategoryName</td>
+                <td>
+                    <a class="btn btn-info btn-sm" href="/AdminCategory/UpdateCategory/@i.CategoryId">
+                        <i class="fas fa-pencil-alt"></i>
+                        Düzenle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger btn-sm" href="/AdminCategory/DeleteCategory/@i.CategoryId">
+                        <i class="fas fa-trash"></i>
+                        Sil
+                    </a>
+                </td>
+                <td><a href="#" class="btn btn-warning">Başlıklar</a></td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a href="/AdminCategory/AddCategory/" class="btn btn-success">Yeni Kategori Ekle</a>
+<script>
+    $('#tbl1').DataTable(
+        {
+            //order: [
+            //    [2, 'desc'] 2.indexteki sütunu büyükten küçüğe sıralı şekilde getirir.
+            //]
+            pageLength: 10,
+            //lengthMenu: [
+            //    [10, 25, 50, 100, -1],
+            //    ['10 Adet', '25 Adet', '50 Adet', '100 Adet', 'Tümü']
+            //],
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.10.19/i18n/Turkish.json"
+            }
+        });
+</script>

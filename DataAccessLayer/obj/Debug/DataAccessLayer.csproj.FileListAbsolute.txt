@@ -34,3 +34,21 @@ D:\Github\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCo
 D:\Github\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\Github\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\Github\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig2.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

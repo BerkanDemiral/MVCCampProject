@@ -30,5 +30,20 @@ namespace BuisnessLayer.Concrete
         {
             _categoryDal.Insert(category); // fluentValidation kontrollerini controller tarafında gerekleştiririz.
         }
+
+        public Category GetById(int id)
+        {
+            return _categoryDal.Get(x => x.CategoryId == id);
+        }
+
+        public void CategoryDelete(Category p)
+        {
+            _categoryDal.Delete(p);
+        }
+
+        public void CategoryUodate(Category p)
+        {
+            _categoryDal.Update(p);
+        }
     }
 }

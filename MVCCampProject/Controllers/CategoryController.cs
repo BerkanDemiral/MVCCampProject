@@ -35,7 +35,7 @@ namespace MVCCampProject.Controllers
         public ActionResult AddCategory(Category category)
         {
             CategoryValidator categoryValidator = new CategoryValidator();
-            ValidationResult results = categoryValidator.Validate(category); // parametrenin validasyonunu yap
+            ValidationResult results = categoryValidator.Validate(category); // parametrenin validasyonunu yap --> fluentvalidation.results
 
             if (results.IsValid)
             {
