@@ -1,3 +1,3 @@
 # MVCCampProject
 
-Visual Studio Senkronizasyon Denemsi
+Visual Studio Senkronizasyon Denemesi
