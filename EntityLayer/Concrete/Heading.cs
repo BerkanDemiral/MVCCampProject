@@ -20,6 +20,8 @@ namespace EntityLayer.Concrete
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
+        public bool HeadingStatus { get; set; }
+
         public ICollection<Content> Contents { get; set; } // bu sefer 1 olan başlık çok olan içerik(mesajlar) kısmı
 
         public int WriterId { get; set; }

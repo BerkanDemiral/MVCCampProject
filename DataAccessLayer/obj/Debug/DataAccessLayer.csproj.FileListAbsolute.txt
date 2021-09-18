@@ -54,3 +54,8 @@ C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAcc
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.addAboutWriter.resources
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addedWriterTittle.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migimageUpdate.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addWriterStatus.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_AddContentStatus.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addHeadingStatus.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addMessageClass.resources

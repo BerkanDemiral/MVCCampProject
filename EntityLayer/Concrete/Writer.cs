@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         [StringLength(40)]
         public string NickName { get; set; }
 
-        [StringLength(100)]
+        [StringLength(300)]
         public string WriterImage { get; set; }
 
         [StringLength(250)]
@@ -30,6 +30,9 @@ namespace EntityLayer.Concrete
 
         [StringLength(100)]
         public String WriterTitle { get; set; }
+
+      
+        public bool WriterStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; } // başlığı bir yazar açacak ve başlığı açam yazarı bulabileceğiz. 
                                                            // ve 1 yazar birden fazla başlık açabileceği için bunu yaptık(bu yazarın açtığı başlıklar vs..) 

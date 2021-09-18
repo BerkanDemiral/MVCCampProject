@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Abstract
 {
-    interface ICategoryService 
+    public interface ICategoryService 
     {
         List<Category> GetList();
         void CategoryAddBL(Category category);
