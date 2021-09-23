@@ -92,7 +92,7 @@
                                     </a>
                                     <br />
                                     <small>
-                                        @item.HeadingDate.ToShortDateString()
+                                        @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
                                     </small>
                                 </td>
                                 <td>

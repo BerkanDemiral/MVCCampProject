@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "LinqCarts";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h3 style="font-weight:bolder; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">İstatistik Kartları</h3>
+
+<br />
+
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Esteem Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="~/AdminLTE-3.0.4/web3/css/component.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/AdminLTE-3.0.4/web3/css/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+
+
+    <!-- font-awesome-icons -->
+    <link href="~/AdminLTE-3.0.4/web3/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+<body>
+    <!-- banner -->
+    <div class="clearfix"></div>
+
+    <ul class="ca-menu">
+        <li>
+            <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main">@ViewBag.numberOfWriters_</h4>
+                    <h3 class="ca-sub">Yazar Sayısı</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main one">@ViewBag.numberOfCategories_</h4>
+                    <h3 class="ca-sub one">Oluşturulan Kategori Sayısı</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-money" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main two">@ViewBag.numberOfContent_</h4>
+                    <h3 class="ca-sub two">Toplam İçerik</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main three">@ViewBag.numberOfHeadings_</h4>
+                    <h3 class="ca-sub three">Spor Kategorisine Ait Başlık Sayısı</h3>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <ul class="ca-menu">
+        <li>
+            <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main">@ViewBag.writerNickNameForChar_</h4>
+                    <h3 class="ca-sub">İçinde a harfi Olan Yazar Sayısı</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main one">@ViewBag.trueStatus_</h4>
+                    <h3 class="ca-sub one">Aktif Kategori Sayısı</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-money" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main two">@ViewBag.falseStatus_</h4>
+                    <h3 class="ca-sub two">Pasif Kategori Sayısı</h3>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+                <div class="ca-content">
+                    <h4 class="ca-main three">@ViewBag.statusDifference_</h4>
+                    <h3 class="ca-sub three">Kategori Durumları Arası Sayısal Fark</h3>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+</body>
+</html>

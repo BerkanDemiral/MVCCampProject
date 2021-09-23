@@ -52,20 +52,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFreamwork\EfAboutDal.cs" />
+    <Compile Include="EntityFreamwork\EfAdminDal.cs" />
     <Compile Include="EntityFreamwork\EfCategoryDal.cs" />
     <Compile Include="EntityFreamwork\EfContactDal.cs" />
     <Compile Include="EntityFreamwork\EfContentDal.cs" />
     <Compile Include="EntityFreamwork\EfHeadingDal.cs" />
+    <Compile Include="EntityFreamwork\EfImageFileDal.cs" />
     <Compile Include="EntityFreamwork\EfMessageDal.cs" />
     <Compile Include="EntityFreamwork\EfWriterDal.cs" />
     <Compile Include="Migrations\202108290933262_mig1.cs" />
@@ -103,6 +107,18 @@
     <Compile Include="Migrations\202109182159525_mig_addMessageClass.cs" />
     <Compile Include="Migrations\202109182159525_mig_addMessageClass.designer.cs">
       <DependentUpon>202109182159525_mig_addMessageClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109191934428_mig_addMessageDate.cs" />
+    <Compile Include="Migrations\202109191934428_mig_addMessageDate.designer.cs">
+      <DependentUpon>202109191934428_mig_addMessageDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109192213386_mig_newImageFilesClass.cs" />
+    <Compile Include="Migrations\202109192213386_mig_newImageFilesClass.designer.cs">
+      <DependentUpon>202109192213386_mig_newImageFilesClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109221415240_mig_AdminClassAdded.cs" />
+    <Compile Include="Migrations\202109221415240_mig_AdminClassAdded.designer.cs">
+      <DependentUpon>202109221415240_mig_AdminClassAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,6 +163,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109182159525_mig_addMessageClass.resx">
       <DependentUpon>202109182159525_mig_addMessageClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109191934428_mig_addMessageDate.resx">
+      <DependentUpon>202109191934428_mig_addMessageDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109192213386_mig_newImageFilesClass.resx">
+      <DependentUpon>202109192213386_mig_newImageFilesClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109221415240_mig_AdminClassAdded.resx">
+      <DependentUpon>202109221415240_mig_AdminClassAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,7 +9,7 @@
 <div class="col-md-9">
     <div class="card card-primary card-outline">
         <div class="card-header">
-            <h3 class="card-title">Gelen Mail</h3>
+            <h3 class="card-title">Mesaj Detayı</h3>
             <div class="card-tools">
                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Previous"><i class="fas fa-chevron-left"></i></a>
                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Next"><i class="fas fa-chevron-right"></i></a>
@@ -24,7 +24,7 @@
                 <h6>
                     <b>Kimden:</b> @Html.DisplayFor(x => x.SenderMail) <br />
                     <b>Kime:</b>  @Html.DisplayFor(x => x.RecieverMail)
-                    <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
+                    <span class="mailbox-read-time float-right">@DateTime.Parse(Html.DisplayFor(x => x.MessageDate).ToString()).ToString("dd-MMM-yyyy")</span>
                 </h6>
             </div>
             <div class="mailbox-read-message">

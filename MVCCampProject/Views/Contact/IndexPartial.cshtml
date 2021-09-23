@@ -1,6 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | Compose Message</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <!-- Theme style -->
+    <!-- summernote -->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.css">
+
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote.min.js"></script>
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
 <body class="hold-transition sidebar-mini">
 
     <!-- Content Wrapper. Contains page content -->
@@ -34,35 +50,30 @@
                             <li class="nav-item active">
                                 <a href="/Contact/Index/" class="nav-link">
                                     <i class="fas fa-mail-bulk"></i> İletişim
-                                    <span class="badge bg-primary float-right">12</span>
+                                    <span class="badge bg-primary float-right"></span>
                                 </a>
                             </li>
 
                             <li class="nav-item active">
                                 <a href="/Message/Inbox/" class="nav-link">
                                     <i class="fas fa-inbox"></i> Gelen Mesajlar
-                                    <span class="badge bg-primary float-right">12</span>
+                                    <span class="badge bg-primary float-right">@ViewBag.inbox</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="/Message/SendBox/" class="nav-link">
                                     <i class="far fa-envelope"></i> Gönderilenler
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-file-alt"></i> Taslaklar
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="fas fa-filter"></i> Spam
-                                    <span class="badge bg-warning float-right">65</span>
+                                    <span class="badge bg-primary float-right">@ViewBag.sendBox</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-trash-alt"></i> Silinenler
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-envelope"></i> Talaklar
                                 </a>
                             </li>
                         </ul>

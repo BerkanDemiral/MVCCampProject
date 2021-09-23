@@ -35,7 +35,17 @@ namespace BuisnessLayer.Concrete
 
         public List<Heading> GetList()
         {
-            return _headingDal.List();
+            return _headingDal.List(x=>x.HeadingStatus==true);
+        }
+
+        public List<Heading> GetListByCategoryName(string categoryName)
+        {
+            return _headingDal.List(x=>x.Category.CategoryName == categoryName);
+        }
+
+        public List<Heading> GetListByWriter(int id)
+        {
+            return _headingDal.List(x => x.WriterId == id && x.HeadingStatus == true);
         }
 
         public void UpdateHeading(Heading heading)

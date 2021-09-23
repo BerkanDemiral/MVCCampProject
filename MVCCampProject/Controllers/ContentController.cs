@@ -13,6 +13,8 @@ namespace MVCCampProject.Controllers
         // GET: Content
 
         ContentManager contentManager = new ContentManager(new EfContentDal());
+
+        
         public ActionResult Index()
         {
             var ContentValues =  contentManager.GetList();

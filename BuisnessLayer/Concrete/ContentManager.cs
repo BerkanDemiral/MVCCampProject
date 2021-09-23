@@ -44,6 +44,11 @@ namespace BuisnessLayer.Concrete
             // content dal içerisinde parametreli bir list metodu daha var (ezme) bu sayede bunu kullanabiliyoruz. 
         }
 
+        public List<Content> GetListByWriter(int id)
+        {
+            return _contentDal.List(x => x.WriterId == id);
+        }
+
         public void UpdateContent(Content p)
         {
             _contentDal.Update(p);

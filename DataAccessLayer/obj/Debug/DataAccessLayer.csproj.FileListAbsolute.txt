@@ -59,3 +59,6 @@ C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAcc
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_AddContentStatus.resources
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addHeadingStatus.resources
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addMessageClass.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addMessageDate.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_newImageFilesClass.resources
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_AdminClassAdded.resources

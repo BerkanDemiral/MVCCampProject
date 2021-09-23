@@ -11,9 +11,11 @@ using System.Web.Mvc;
 
 namespace MVCCampProject.Controllers
 {
+
     public class AdminCategoryController : Controller
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal()); // EntityFreamwork yerine başka bir yapıya geçersek kolaylık olsun diye
+
         public ActionResult Index()
         {
             var values = categoryManager.GetList();

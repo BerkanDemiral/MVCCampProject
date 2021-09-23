@@ -28,6 +28,11 @@ namespace BuisnessLayer.Concrete
             _writerDal.Delete(writer);
         }
 
+        public Writer GetByAuthentication(Writer writer)
+        {
+            return _writerDal.List().FirstOrDefault(x => x.WriterEmail == writer.WriterEmail && x.WriterPassword == writer.WriterPassword);
+        }
+
         public Writer GetById(int id)
         {
             return _writerDal.Get(x => x.WriterId == id);
@@ -38,9 +43,19 @@ namespace BuisnessLayer.Concrete
             return _writerDal.List();
         }
 
+        public List<Writer> GetListByNickNameContains(string character)
+        {
+            return _writerDal.List(x=>x.NickName.Contains(character));
+        }
+
         public void UpdateWriter(Writer writer)
         {
             _writerDal.Update(writer);
+        }
+
+        public int WriterIdInfo(string p)
+        {
+            return _writerDal.List().Where(x => x.WriterEmail == p).Select(y => y.WriterId).FirstOrDefault();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using BuisnessLayer.Concrete;
+using BuisnessLayer.ValidationRules;
 using DataAccessLayer.EntityFreamwork;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,13 @@ using System.Web.Mvc;
 
 namespace MVCCampProject.Controllers
 {
+    [Authorize]
     public class MessageController : Controller
     {
         MessageManager messageManager = new MessageManager(new EfMessageDal());
+        MessageValidator messageValidator = new MessageValidator();
+        //ValidationResult result = messageValidator.Validate(message);
+
         public ActionResult Inbox()
         {
             var inboxValues = messageManager.GetListInbox();
@@ -30,6 +36,17 @@ namespace MVCCampProject.Controllers
             return View(messageValue);
         }
 
+        public PartialViewResult IndexPartial()
+        {
+            var numberOfInbox = messageManager.GetListInbox().Count();
+            ViewBag.inbox = numberOfInbox;
+
+            var numberOfSendBox = messageManager.GetListSendBox().Count();
+            ViewBag.sendBox = numberOfSendBox;
+
+            return PartialView();
+        }
+
         [HttpGet]
         public ActionResult NewMessage()
         {
@@ -37,10 +54,25 @@ namespace MVCCampProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult NewMessage(Message message)
+        public ActionResult NewMessage(Message p)
         {
-            messageManager.AddMessageBL(message);
-            return RedirectToAction("Index");
+            ValidationResult results = messageValidator.Validate(p);
+
+            if (results.IsValid)
+            {
+                p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                messageManager.AddMessageBL(p);
+                return RedirectToAction("SendBox");
+            }
+
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }
