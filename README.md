@@ -39,7 +39,8 @@ Sisteme authentication şartı bulunmayan ve herkesin görebileceği bir anasayf
 ![writers](https://user-images.githubusercontent.com/54038172/134563018-a44f1bea-16eb-483b-9211-e482ec25268e.PNG)
 
 * Burası ise tüm başşlıklar, hangi yazar açtı gibi özelliklerin görüntülendiği Heading sayfası
-![headings](https://user-images.githubusercontent.com/54038172/134563340-b0d65e4f-aba0-467d-b539-feb1605a45b5.PNG)
+![heading22s](https://user-images.githubusercontent.com/54038172/134565372-74836d46-9ce4-4a9b-aab2-b1cb0734512b.PNG)
+
 * Eğer yazar girişi yaarsak yine bu tasarıma benzer bir tasarım ile açılan başlıkları görecek ama session ile o yazara ait girişi aldığımız için sadece yazarın açtığı başlıkları görüntüleyebilmekteyiz. 
 
 
