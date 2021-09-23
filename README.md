@@ -12,10 +12,10 @@ Sisteme authentication şartı bulunmayan ve herkesin görebileceği bir anasayf
 
 ### Login Sayfaları 
 <hr>
-![admin](https://user-images.githubusercontent.com/54038172/134563693-0b8f9c51-2ced-4b86-bcba-8a1ba82eabe0.PNG)
-
 
 * Admin ve Writer login sayfalarında eğer kullancıı yanlış bir kullanıcı adı ve şifre girerse bunun uyarısını veren alert yapısı bulunmakta. Bu yapı daha sonrasında Jquery Ajax destekli olarak TOASTR kullanılacaktır! 
+
+![admin](https://user-images.githubusercontent.com/54038172/134563693-0b8f9c51-2ced-4b86-bcba-8a1ba82eabe0.PNG)
 
 ![writerLogin](https://user-images.githubusercontent.com/54038172/134557203-8ba94141-1d58-485e-80f4-5db9e23cba8b.PNG)
 
