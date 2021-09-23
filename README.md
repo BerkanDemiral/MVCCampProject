@@ -12,7 +12,7 @@ Sisteme authentication şartı bulunmayan ve herkesin görebileceği bir anasayf
 
 ### Login Sayfaları 
 <hr>
-![adminLogin](https://user-images.githubusercontent.com/54038172/134556730-2e071b94-0127-41bb-a86f-1efc42e52712.png)
+![adminLogin](https://user-images.githubusercontent.com/54038172/134556730-2e071b94-0127-41bb-a86f-1efc42e52712.PNG)
 
 * Admin ve Writer login sayfalarında eğer kullancıı yanlış bir kullanıcı adı ve şifre girerse bunun uyarısını veren alert yapısı bulunmakta. Bu yapı daha sonrasında Jquery Ajax destekli olarak TOASTR kullanılacaktır! 
 
@@ -20,3 +20,25 @@ Sisteme authentication şartı bulunmayan ve herkesin görebileceği bir anasayf
 
 ![session](https://user-images.githubusercontent.com/54038172/134557229-1d10b0b7-7fe0-473e-940a-e85307579e21.PNG)
 * Login Controller kısmında ise giriş yapan kullanıcının bilgilerinin alınmasını sağlayan Session yapısı kullandım. Bu sayede admin paneline ve yazar paneline yönlendirilen kullanıcılar kendilerine ait kısımların görüntülenmesini sağlayacak.
+
+### Yazar ve Admin Panellerine özel Bazı Ekran Görüntüleri
+<hr>
+
+* Mesaj sayfası hem yazar hem admmin için neredeyse aynı işlemekte. Girişte alınan Session bilgilerine göre yazarlar ve admin arasında mesajlaşma yapılmasına olanak sağyalan bir message yapısı bulunmaktadır. Burada kullanıcılar kendilerine gelen mesajları ve gönderdikleri mesajları görebilmekte ve yeni mesajlar yazabilmektedirler. 
+![messageAdmin](https://user-images.githubusercontent.com/54038172/134557810-706e83fc-2fec-4cc0-95f5-8f8c90daa75d.PNG)
+
+![newMessage](https://user-images.githubusercontent.com/54038172/134558424-e111f95b-655a-4311-9957-d5413b8b21a5.PNG)
+
+![mesajdetay](https://user-images.githubusercontent.com/54038172/134558886-5fd0c80c-3855-4a81-96ed-57d1c1fe118f.PNG)
+
+### Yazarlar ve Onların Açtıkları Başlıklar
+<hr>
+
+* Burası admin paneli içerisindeki yazarlar sayfası. Burada yazarların fotoğraflarını, açtıkları başlıkları görebiliyor ve profillerini düzenleyebiliyoruz.
+![writers](https://user-images.githubusercontent.com/54038172/134563018-a44f1bea-16eb-483b-9211-e482ec25268e.PNG)
+
+* Burası ise tüm başşlıklar, hangi yazar açtı gibi özelliklerin görüntülendiği Heading sayfası
+![headings](https://user-images.githubusercontent.com/54038172/134563340-b0d65e4f-aba0-467d-b539-feb1605a45b5.PNG)
+* Eğer yazar girişi yaarsak yine bu tasarıma benzer bir tasarım ile açılan başlıkları görecek ama session ile o yazara ait girişi aldığımız için sadece yazarın açtığı başlıkları görüntüleyebilmekteyiz. 
+
+
