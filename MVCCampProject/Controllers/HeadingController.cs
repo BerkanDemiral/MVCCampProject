@@ -6,7 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using PagedList;
+using PagedList.Mvc;
 namespace MVCCampProject.Controllers
 {
     public class HeadingController : Controller
@@ -14,9 +15,9 @@ namespace MVCCampProject.Controllers
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
-        public ActionResult Index()
+        public ActionResult Index(int p=1)
         {
-            var HeadingValues = headingManager.GetList();
+            var HeadingValues = headingManager.GetList().ToPagedList(p, 7); ;
             return View(HeadingValues);
         }
 
@@ -79,6 +80,12 @@ namespace MVCCampProject.Controllers
             heading.HeadingStatus = false;
             headingManager.DeleteHeading(heading);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult HeadingReport()
+        {
+            var HeadingValues = headingManager.GetList();
+            return View(HeadingValues);
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MVCCampProject.Controllers
 {
@@ -14,12 +16,6 @@ namespace MVCCampProject.Controllers
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
-
-
-        public ActionResult WriterProfile()
-        {
-            return View();
-        }
 
         public ActionResult MyHeading(string p)
         {
@@ -89,6 +85,13 @@ namespace MVCCampProject.Controllers
             headingManager.DeleteHeading(heading);
             return RedirectToAction("MyHeading");
         }
+
+        public ActionResult AllHeading(int p=1) // 1.sayfadan paged işlemi başlasın demek istedik.
+        {
+            var headings = headingManager.GetList().ToPagedList(p,7);
+            return View(headings);
+        }
+
 
     }
 }

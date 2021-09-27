@@ -38,11 +38,11 @@
             <div class="sidebar">
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
+                    @*<div class="image">
                         <img src="/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
+                    </div>*@
                     <div class="info">
-                        <a href="#" class="d-block">Berkan Demiral</a>
+                        <a href="#" class="d-block">Yazar Paneli</a>
                     </div>
                 </div>
 
@@ -50,9 +50,9 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
+    with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview">
-                            <a href="/WriterPanel/MyProfile/" class="nav-link">
+                            <a href="/WriterPanelProfile/WriterProfile/" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Profilim
@@ -67,11 +67,27 @@
                                 </p>
                             </a>
                         </li>
-                        <li style="margin-top:5px" class="nav-item has-treeview">
-                            <a href="/Gallery/Index/" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                        <li style="margin-top:5px" class="nav-item">
+                            <a href="/WriterPanelHeading/AllHeading/" class="nav-link">
+                                <i class="nav-icon fas fa-list-alt"></i>
+                                <p>
+                                    Tüm Başlıklar
+                                </p>
+                            </a>
+                        </li>
+                        <li style="margin-top:5px" class="nav-item">
+                            <a href="/ShowCase/HomePage/" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Siteye Git
+                                </p>
+                            </a>
+                        </li>
+                        <li style="margin-top:5px" class="nav-item has-treeview">
+                            <a href="/Default/Headings/" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Tüm Yazılar
                                 </p>
                             </a>
                         </li>
@@ -93,7 +109,7 @@
                         </li>
 
                         <li style="margin-top:5px" class="nav-item has-treeview">
-                            <a href="/Login/LogOut/" class="nav-link">
+                            <a href="/Login/WriterLogOut/" class="nav-link">
                                 <i class="nav-icon fas fa-window-close"></i>
                                 <p>
                                     Çıkış Yap

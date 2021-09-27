@@ -28,7 +28,7 @@
 
 
                                 <div class="time-label">
-                                    <span class="bg-success">@item.ContentDate.ToShortDateString()</span>
+                                    <span class="bg-warning">@(((DateTime)item.ContentDate).ToString("dd-MMM-yyyy")) - @item.Writer.NickName</span>
                                 </div>
                                 <!-- /.timeline-label -->
                                 <!-- timeline item -->

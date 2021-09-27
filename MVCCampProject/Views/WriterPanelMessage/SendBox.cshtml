@@ -13,12 +13,13 @@
             <h3 class="card-title">Gönderilen Mesajlar</h3>
             <div class="card-tools">
                 <div class="input-group input-group-sm">
-                    <input type="text" class="form-control" placeholder="Mesajlarda Ara">
-                    <div class="input-group-append">
-                        <div class="btn btn-primary">
-                            <i class="fas fa-search"></i>
-                        </div>
-                    </div>
+                    @using (Html.BeginForm("SendBox", "WriterPanelMessage", FormMethod.Post))
+                    {
+                        <p>
+                            Aranacak kelimeyi girin: @Html.TextBox("word")
+                            <input type="submit" value="Ara" />
+                        </p>
+                    }
                 </div>
             </div>
             <!-- /.card-tools -->

@@ -16,15 +16,18 @@ namespace MVCCampProject.Controllers
         MessageManager messageManager = new MessageManager(new EfMessageDal());
         MessageValidator messageValidator = new MessageValidator();
 
-        public ActionResult Inbox()
+
+        public ActionResult Inbox(string word)
         {
-            var inboxValues = messageManager.GetListInbox();
+            string p = (string)Session["WriterEmail"];
+            var inboxValues = messageManager.GetListInbox(p, word);
             return View(inboxValues);
         }
 
-        public ActionResult SendBox()
+        public ActionResult SendBox(string word)
         {
-            var sendBoxValues = messageManager.GetListSendBox();
+            string p = (string)Session["WriterEmail"];
+            var sendBoxValues = messageManager.GetListSendBox(p, word);
             return View(sendBoxValues);
         }
 
@@ -36,10 +39,12 @@ namespace MVCCampProject.Controllers
 
         public PartialViewResult IndexPartial()
         {
-            var numberOfInbox = messageManager.GetListInbox().Count();
+            string p = (string)Session["WriterEmail"];
+
+            var numberOfInbox = messageManager.GetListInbox(p).Count();
             ViewBag.inbox = numberOfInbox;
 
-            var numberOfSendBox = messageManager.GetListSendBox().Count();
+            var numberOfSendBox = messageManager.GetListSendBox(p).Count();
             ViewBag.sendBox = numberOfSendBox;
 
             return PartialView();
@@ -52,12 +57,15 @@ namespace MVCCampProject.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult NewMessage(Message p)
         {
             ValidationResult results = messageValidator.Validate(p);
+            string email = (string)Session["WriterEmail"];
 
             if (results.IsValid)
             {
+                p.SenderMail = email;
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 messageManager.AddMessageBL(p);
                 return RedirectToAction("SendBox");

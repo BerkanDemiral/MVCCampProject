@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Content
+
+@{
+    ViewBag.Title = "AddContent";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<h3 style="font-weight:bolder; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">İçerik Ekle</h3>
+
+<br />
+
+@using (Html.BeginForm("AddContent", "WriterPanelContent", FormMethod.Post))
+{
+    <div class="form-group">
+
+        <input type="hidden" name="HeadingId" value="@ViewBag.headingId" />
+
+        @Html.Label("İçerik")
+        @Html.TextAreaFor(x => x.ContentValue, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ContentValue)
+        <br />
+
+    </div>
+
+
+    <button class="btn btn-warning">İçerik Ekle</button>
+}
+

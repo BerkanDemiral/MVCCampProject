@@ -13,15 +13,17 @@ namespace MVCCampProject.Controllers
     {
 
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
+        ContentManager contentManager = new ContentManager(new EfContentDal());
         public ActionResult Headings()
         {
             var headingList = headingManager.GetList();
             return View(headingList);
         }
 
-        public ActionResult Index()
+        public PartialViewResult Index(int id=0) // ekran açıldığı anda hata vermemesi için
         {
-            return View();
+            var contentValues = contentManager.GetListByHeadingID(id );
+            return PartialView(contentValues);
         }
     }
 }

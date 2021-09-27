@@ -42,10 +42,11 @@ namespace MVCCampProject.Controllers
 
         public PartialViewResult IndexPartial()
         {
-            var numberOfInbox = messageManager.GetListInbox().Count();
+            string p = (string)Session["AdminUserName"];
+            var numberOfInbox = messageManager.GetListInbox(p).Count();
             ViewBag.inbox = numberOfInbox;
 
-            var numberOfSendBox = messageManager.GetListSendBox().Count();
+            var numberOfSendBox = messageManager.GetListSendBox(p).Count();
             ViewBag.sendBox = numberOfSendBox;
 
             return PartialView();

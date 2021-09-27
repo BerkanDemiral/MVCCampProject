@@ -38,6 +38,11 @@ namespace BuisnessLayer.Concrete
             return _contentDal.List();
         }
 
+        public List<Content> GetList(string p)
+        {
+            return _contentDal.List(x => x.ContentValue.Contains(p));
+        }
+
         public List<Content> GetListByHeadingID(int id)
         {
             return _contentDal.List(x => x.HeadingId == id); // birden çok değer listeleneceği için LİST kullandık !!!

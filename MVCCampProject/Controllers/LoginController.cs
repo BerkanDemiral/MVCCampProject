@@ -55,6 +55,9 @@ namespace MVCCampProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(writerValue.WriterEmail, false);
                 Session["WriterEmail"] = writerValue.WriterEmail; // sisteme giriş yapan kişinin kullanıcı adını  aldık
+
+                ViewBag.writerName = Session["WriterEmail"] = writerValue.WriterEmail;
+
                 return RedirectToAction("Inbox", "WriterPanelMessage");
             }
 
@@ -63,6 +66,20 @@ namespace MVCCampProject.Controllers
                 ViewBag.Message = "Kullanıcı Adı veya Parolanız Hatalı.";
                 return View();
             }
+        }
+
+        public ActionResult WriterLogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("WriterLogin","Login");
+        }
+
+        public ActionResult AdminLogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

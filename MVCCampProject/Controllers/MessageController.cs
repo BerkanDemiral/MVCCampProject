@@ -18,15 +18,35 @@ namespace MVCCampProject.Controllers
         MessageValidator messageValidator = new MessageValidator();
         //ValidationResult result = messageValidator.Validate(message);
 
+        [HttpGet]
         public ActionResult Inbox()
         {
-            var inboxValues = messageManager.GetListInbox();
+            string p = (string)Session["AdminUserName"];
+            var inboxValues = messageManager.GetListInbox(p);
             return View(inboxValues);
         }
 
+        [HttpPost]
+        public ActionResult Inbox(string word)
+        {
+            string p = (string)Session["AdminUserName"];
+            var inboxValues = messageManager.GetListInbox(p, word);
+            return View(inboxValues);
+        }
+
+        [HttpGet]
         public ActionResult SendBox()
         {
-            var sendBoxValues = messageManager.GetListSendBox();
+            string p = (string)Session["AdminUserName"];
+            var sendBoxValues = messageManager.GetListSendBox(p);
+            return View(sendBoxValues);
+        }
+
+        [HttpPost]
+        public ActionResult SendBox(string word)
+        {
+            string p = (string)Session["AdminUserName"];
+            var sendBoxValues = messageManager.GetListSendBox(p, word);
             return View(sendBoxValues);
         }
 
@@ -38,10 +58,11 @@ namespace MVCCampProject.Controllers
 
         public PartialViewResult IndexPartial()
         {
-            var numberOfInbox = messageManager.GetListInbox().Count();
+            string p = (string)Session["AdminUserName"];
+            var numberOfInbox = messageManager.GetListInbox(p).Count();
             ViewBag.inbox = numberOfInbox;
 
-            var numberOfSendBox = messageManager.GetListSendBox().Count();
+            var numberOfSendBox = messageManager.GetListSendBox(p).Count();
             ViewBag.sendBox = numberOfSendBox;
 
             return PartialView();
@@ -53,13 +74,16 @@ namespace MVCCampProject.Controllers
             return View();
         }
 
+
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult NewMessage(Message p)
         {
+            string email = (string)Session["AdminUserName"];
             ValidationResult results = messageValidator.Validate(p);
-
             if (results.IsValid)
             {
+                p.SenderMail = email;
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 messageManager.AddMessageBL(p);
                 return RedirectToAction("SendBox");

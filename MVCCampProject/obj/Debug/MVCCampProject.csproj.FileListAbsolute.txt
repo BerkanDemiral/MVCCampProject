@@ -350,3 +350,7 @@ C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\roslyn\vbc.exe
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\roslyn\vbc.rsp
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\roslyn\VBCSCompiler.exe
 C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\PagedList.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\PagedList.Mvc.dll
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\PagedList.xml
+C:\Users\demir\Desktop\MVC CAMP\MVCCampProject\MVCCampProject\bin\PagedList.Mvc.xml

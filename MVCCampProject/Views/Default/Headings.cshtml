@@ -43,6 +43,10 @@
 
                     <div class="info">
                         <a href="#" class="d-block"><b>BAŞLIKLAR</b></a>
+                        <br />
+                        <a class="d-block" href="/WriterPanelProfile/WriterProfile/">
+                            <b>Profile Dön</b>
+                        </a>
                     </div>
                 </div>
 
@@ -52,7 +56,7 @@
                         @foreach (var item in Model)
                         {
                         <li style="margin-top:5px" class="nav-item">
-                            <a href="/WriterPanelHeading/MyHeading/" class="nav-link">
+                            <a href="/Default/Headings/@item.HeadingId" class="nav-link">
                                 <p>
                                     @item.HeadingName
                                 </p>
@@ -70,13 +74,7 @@
         <div class="content-wrapper">
 
             <!-- Main content -->
-            <section class="content">
-                <div class="row">
-                    <div class="col-md-12">
-                      
-                    </div>
-                </div>
-            </section>
+           @Html.Action("Index","Default")
             <!-- /.content -->
         </div>
     </div>

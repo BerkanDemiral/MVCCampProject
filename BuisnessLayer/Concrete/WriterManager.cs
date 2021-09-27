@@ -20,6 +20,7 @@ namespace BuisnessLayer.Concrete
 
         public void AddWriterBL(Writer writer)
         {
+            writer.WriterStatus = true;
             _writerDal.Insert(writer);
         }
 

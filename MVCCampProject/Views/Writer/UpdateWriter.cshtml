@@ -10,7 +10,7 @@
 {
 <div class="form-group">
     @Html.Label("Yazar ID")
-    @Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.WriterId, new { @class = "form-control" })
     <br />
 
     @Html.Label("Yazar Nickname")
@@ -23,6 +23,10 @@
 
     @Html.Label("Yazar Başlığı")
     @Html.TextAreaFor(x => x.WriterTitle, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Fotoğraf Linki")
+    @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
     <br />
 
     @Html.Label("Email")

@@ -26,5 +26,19 @@ namespace MVCCampProject.Controllers
             var valuesByHeading = contentManager.GetListByHeadingID(id);
             return View(valuesByHeading);
         }
+
+        [HttpGet]
+        public ActionResult GetAllContent()
+        {
+            var values = contentManager.GetList();
+            return View(values);
+        }
+
+        [HttpPost]
+        public ActionResult GetAllContent(string p)
+        {
+            var values = contentManager.GetList(p);
+            return View(values);
+        }
     }
 }
